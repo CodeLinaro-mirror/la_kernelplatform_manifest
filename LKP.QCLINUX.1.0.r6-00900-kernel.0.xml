@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="clo" fetch="https://git.codelinaro.org/clo/la" review="codelinaro.org"/>
+  <default remote="clo" revision="kernel.build.lnx.1.0" sync-j="8"/>
+  <project name="kernel/qcom" path="kernel_platform/kernel" revision="083a0883336793027bbd20f0d4e76e745e875798" upstream="refs/heads/kernel.qclinux.1.0.r6-rel"/>
+</manifest>
