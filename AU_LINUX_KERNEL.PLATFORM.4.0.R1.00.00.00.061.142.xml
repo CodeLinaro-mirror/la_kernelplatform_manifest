@@ -2,39 +2,12 @@
 <manifest>
     <remote fetch="https://git.codelinaro.org/clo/la" name="clo-la"/>
   <default remote="clo-la" revision="dummy_revision" sync-c="true" sync-tags="false"/>
+  <project remote="clo-la" name="platform/vendor/qcom-opensource/devicetree" path="kernel_platform/qcom/opensource/devicetree" revision="f1783adf9ddb9b60e83771eb9f213f6aa825912d" upstream="refs/heads/kernel.lnx.6.6.r1-rel">
+    <linkfile dest="kernel_platform/msm-kernel/arch/arm64/boot/dts/vendor" src="."/>
+  </project>
   <project remote="clo-la" name="abl/tianocore/edk2" path="kernel_platform/bootable/bootloader/edk2" revision="b424b741abb72213965833c8a8a868c9b8164fc2" upstream="refs/heads/uefi.lnx.5.0.r10-rel"/>
-  <project remote="clo-la" name="kernel/build" path="kernel_platform/build/kernel" revision="8768276b13352d3db49938bc114838206e6a62b9" upstream="refs/heads/kernel.lnx.6.6.r1-rel">
-    <linkfile dest="kernel_platform/tools/bazel" src="kleaf/bazel.sh"/>
-    <linkfile dest="kernel_platform/build/build_utils.sh" src="build_utils.sh"/>
-    <linkfile dest="kernel_platform/build/all-variants.sh" src="all-variants.sh"/>
-    <linkfile dest="kernel_platform/build/brunch" src="brunch"/>
-    <linkfile dest="kernel_platform/build/build_abl.sh" src="build_abl.sh"/>
-    <linkfile dest="kernel_platform/build/build_module.sh" src="build_module.sh"/>
-    <linkfile dest="kernel_platform/build/android/export_headers.py" src="android/export_headers.py"/>
-    <linkfile dest="kernel_platform/build/android/merge_dtbs.py" src="android/merge_dtbs.py"/>
-    <linkfile dest="kernel_platform/build/android/merge_dtbs.sh" src="android/merge_dtbs.sh"/>
-    <linkfile dest="kernel_platform/build/android/prepare_vendor.sh" src="android/prepare_vendor.sh"/>
-    <linkfile dest="kernel_platform/build/BUILD.bazel" src="BUILD.bazel"/>
-    <linkfile dest="kernel_platform/build/build-tools/path" src="build-tools/path"/>
-    <linkfile dest="kernel_platform/build/_setup_env.sh" src="_setup_env.sh"/>
-    <linkfile dest="kernel_platform/build/multi-switcher.sh" src="multi-switcher.sh"/>
-    <linkfile dest="kernel_platform/build/kleaf" src="kleaf"/>
-    <linkfile dest="kernel_platform/build/abi" src="abi"/>
-    <linkfile dest="kernel_platform/build/static_analysis" src="static_analysis"/>
-    <linkfile dest="kernel_platform/build/_wrapper_common.sh" src="_wrapper_common.sh"/>
-    <linkfile dest="kernel_platform/WORKSPACE" src="kleaf/bazel.WORKSPACE"/>
-    <linkfile dest="kernel_platform/MODULE.bazel" src="kleaf/bzlmod/bazel.MODULE.bazel"/>
-    <linkfile dest="kernel_platform/WORKSPACE.bzlmod" src="kleaf/bzlmod/bazel.WORKSPACE.bzlmod"/>
-  </project>
-  <project remote="clo-la" name="kernel/common" path="kernel_platform/common" revision="7c157c2089d2b51923257fa4555bd631b5b6dda5" upstream="refs/heads/ks-kernel.lnx.4.0.r1-rel">
-    <linkfile dest="kernel_platform/.source_date_epoch_dir" src="."/>
-  </project>
   <project remote="clo-la" name="kernel/common-modules/trusty" path="kernel_platform/common-modules/trusty" revision="b76f8570a1a3480a158f6bc69590dbf326a444d0" upstream="refs/heads/ks-kernel.lnx.4.0.r1-rel"/>
   <project remote="clo-la" name="kernel/prebuilts/build-tools" path="kernel_platform/prebuilts/kernel-build-tools" revision="434f141b6d22a773a163fa9c707b19b4d254d989" upstream="refs/heads/ks-kernel.lnx.4.0.r1-rel" groups="ddk"/>
-  <project remote="clo-la" name="kernel/qcom" path="kernel_platform/msm-kernel" revision="1c1dee33e6a1066220b6c8445789eedbdad1743b" upstream="refs/heads/kernel.lnx.6.6.r1-rel">
-    <linkfile dest="kernel_platform/build_with_bazel.py" src="build_with_bazel.py"/>
-    <linkfile dest="kernel_platform/build/qcom_build_extensions" src="qcom_build_extensions"/>
-  </project>
   <project remote="clo-la" name="kernel_platform/build/bazel_common_rules" path="kernel_platform/build/bazel_common_rules" revision="7104d80549523ce9d9c5b95ec7cab8aba88afdb3" upstream="refs/heads/ks-kernel.lnx.4.0.r1-rel" groups="ddk"/>
   <project remote="clo-la" name="kernel_platform/external/bazel-skylib" path="kernel_platform/external/bazel-skylib" revision="1699b2281164661387bcab62e08b1248f7908c49" upstream="refs/heads/ks-kernel.lnx.4.0.r1-rel" groups="ddk-external"/>
   <project remote="clo-la" name="kernel_platform/external/bazelbuild-apple_support" path="kernel_platform/external/bazelbuild-apple_support" revision="f6003e1e3763f8aad9fb9acae79cfa5fff9ae988" upstream="refs/heads/ks-kernel.lnx.4.0.r1-rel" groups="ddk-external"/>
@@ -65,7 +38,34 @@
   <project remote="clo-la" name="kernel_platform/tools/tradefederation/prebuilts" path="kernel_platform/prebuilts/tradefed" revision="0d6bd67313f94bd03fc54c350b9de54d94442ee7" upstream="refs/heads/ks-kernel.lnx.4.0.r1-rel"/>
   <project remote="clo-la" name="kernelplatform/prebuilts-master/clang/host/linux-x86" path="kernel_platform/prebuilts/clang/host/linux-x86" revision="b099698c583b8361ca771f3cc8d6af6f729f39b3" upstream="refs/heads/ks-kernel.lnx.4.0.r1-rel" groups="ddk"/>
   <project remote="clo-la" name="kernelplatform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" path="kernel_platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" revision="e0de596ee4e1128b36fd2be9ec04422360bf404f" upstream="refs/heads/ks-kernel.lnx.4.0.r1-rel" groups="ddk"/>
-  <project remote="clo-la" name="platform/vendor/qcom-opensource/devicetree" path="kernel_platform/qcom/opensource/devicetree" revision="f1783adf9ddb9b60e83771eb9f213f6aa825912d" upstream="refs/heads/kernel.lnx.6.6.r1-rel">
-    <linkfile dest="kernel_platform/msm-kernel/arch/arm64/boot/dts/vendor" src="."/>
+  <project remote="clo-la" name="kernel/build" path="kernel_platform/build/kernel" revision="8768276b13352d3db49938bc114838206e6a62b9" upstream="refs/heads/kernel.lnx.6.6.r1-rel">
+    <linkfile dest="kernel_platform/tools/bazel" src="kleaf/bazel.sh"/>
+    <linkfile dest="kernel_platform/build/build_utils.sh" src="build_utils.sh"/>
+    <linkfile dest="kernel_platform/build/all-variants.sh" src="all-variants.sh"/>
+    <linkfile dest="kernel_platform/build/brunch" src="brunch"/>
+    <linkfile dest="kernel_platform/build/build_abl.sh" src="build_abl.sh"/>
+    <linkfile dest="kernel_platform/build/build_module.sh" src="build_module.sh"/>
+    <linkfile dest="kernel_platform/build/android/export_headers.py" src="android/export_headers.py"/>
+    <linkfile dest="kernel_platform/build/android/merge_dtbs.py" src="android/merge_dtbs.py"/>
+    <linkfile dest="kernel_platform/build/android/merge_dtbs.sh" src="android/merge_dtbs.sh"/>
+    <linkfile dest="kernel_platform/build/android/prepare_vendor.sh" src="android/prepare_vendor.sh"/>
+    <linkfile dest="kernel_platform/build/BUILD.bazel" src="BUILD.bazel"/>
+    <linkfile dest="kernel_platform/build/build-tools/path" src="build-tools/path"/>
+    <linkfile dest="kernel_platform/build/_setup_env.sh" src="_setup_env.sh"/>
+    <linkfile dest="kernel_platform/build/multi-switcher.sh" src="multi-switcher.sh"/>
+    <linkfile dest="kernel_platform/build/kleaf" src="kleaf"/>
+    <linkfile dest="kernel_platform/build/abi" src="abi"/>
+    <linkfile dest="kernel_platform/build/static_analysis" src="static_analysis"/>
+    <linkfile dest="kernel_platform/build/_wrapper_common.sh" src="_wrapper_common.sh"/>
+    <linkfile dest="kernel_platform/WORKSPACE" src="kleaf/bazel.WORKSPACE"/>
+    <linkfile dest="kernel_platform/MODULE.bazel" src="kleaf/bzlmod/bazel.MODULE.bazel"/>
+    <linkfile dest="kernel_platform/WORKSPACE.bzlmod" src="kleaf/bzlmod/bazel.WORKSPACE.bzlmod"/>
+  </project>
+  <project remote="clo-la" name="kernel/common" path="kernel_platform/common" revision="7c157c2089d2b51923257fa4555bd631b5b6dda5" upstream="refs/heads/ks-kernel.lnx.4.0.r1-rel">
+    <linkfile dest="kernel_platform/.source_date_epoch_dir" src="."/>
+  </project>
+  <project remote="clo-la" name="kernel/qcom" path="kernel_platform/msm-kernel" revision="1c1dee33e6a1066220b6c8445789eedbdad1743b" upstream="refs/heads/kernel.lnx.6.6.r1-rel">
+    <linkfile dest="kernel_platform/build_with_bazel.py" src="build_with_bazel.py"/>
+    <linkfile dest="kernel_platform/build/qcom_build_extensions" src="qcom_build_extensions"/>
   </project>
 </manifest>
