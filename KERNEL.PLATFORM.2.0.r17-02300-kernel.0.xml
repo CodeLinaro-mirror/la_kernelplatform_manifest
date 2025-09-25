@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote fetch="https://git.codelinaro.org/clo/la" name="clo-la"/>
+    <remote fetch="https://git.codelinaro.org/clo/la" name="clo-la"/>
   <default remote="clo-la" revision="dummy_revision" sync-c="true" sync-tags="false"/>
   <project remote="clo-la" name="abl/tianocore/edk2" path="kernel_platform/bootable/bootloader/edk2" revision="d33d3596b3994cd2651b1f8b8fbdb28f2c36ec04" upstream="refs/heads/uefi.lnx.4.0.r34-rel"/>
   <project remote="clo-la" name="kernel/build" path="kernel_platform/build/kernel" revision="5f25e0970231a9a40f9c3d927fc60f1b047614e8" upstream="refs/heads/kernel.lnx.5.15.r32-rel">
