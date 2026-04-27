@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="clo" fetch="https://git.codelinaro.org/clo/la" review="codelinaro.org"/>
+  <default remote="clo" revision="KERNEL.PLATFORM.4.0" sync-j="8"/>
+  <project name="abl/tianocore/edk2" path="kernel_platform/bootable/bootloader/edk2" revision="678e338885f204ac74e174120ab46d231c68158e" upstream="refs/heads/uefi.lnx.5.0.r51-rel"/>
+  <project name="kernel/build" path="kernel_platform/build/kernel" revision="0c7bb83b440c55dcaee088ab3c95652f4451b62c" upstream="refs/heads/kernel.lnx.6.6.r16-rel">
+    <linkfile src="kleaf/bazel.sh" dest="kernel_platform/tools/bazel"/>
+    <linkfile src="build_utils.sh" dest="kernel_platform/build/build_utils.sh"/>
+    <linkfile src="all-variants.sh" dest="kernel_platform/build/all-variants.sh"/>
+    <linkfile src="brunch" dest="kernel_platform/build/brunch"/>
+    <linkfile src="build_abl.sh" dest="kernel_platform/build/build_abl.sh"/>
+    <linkfile src="build_module.sh" dest="kernel_platform/build/build_module.sh"/>
+    <linkfile src="android/export_headers.py" dest="kernel_platform/build/android/export_headers.py"/>
+    <linkfile src="android/merge_dtbs.py" dest="kernel_platform/build/android/merge_dtbs.py"/>
+    <linkfile src="android/merge_dtbs.sh" dest="kernel_platform/build/android/merge_dtbs.sh"/>
+    <linkfile src="android/prepare_vendor.sh" dest="kernel_platform/build/android/prepare_vendor.sh"/>
+    <linkfile src="BUILD.bazel" dest="kernel_platform/build/BUILD.bazel"/>
+    <linkfile src="build-tools/path" dest="kernel_platform/build/build-tools/path"/>
+    <linkfile src="_setup_env.sh" dest="kernel_platform/build/_setup_env.sh"/>
+    <linkfile src="multi-switcher.sh" dest="kernel_platform/build/multi-switcher.sh"/>
+    <linkfile src="kleaf" dest="kernel_platform/build/kleaf"/>
+    <linkfile src="abi" dest="kernel_platform/build/abi"/>
+    <linkfile src="static_analysis" dest="kernel_platform/build/static_analysis"/>
+    <linkfile src="_wrapper_common.sh" dest="kernel_platform/build/_wrapper_common.sh"/>
+    <linkfile src="kleaf/bazel.WORKSPACE" dest="kernel_platform/WORKSPACE"/>
+    <linkfile src="kleaf/bzlmod/bazel.MODULE.bazel" dest="kernel_platform/MODULE.bazel"/>
+    <linkfile src="kleaf/bzlmod/bazel.WORKSPACE.bzlmod" dest="kernel_platform/WORKSPACE.bzlmod"/>
+  </project>
+  <project name="kernel/common" path="kernel_platform/common" revision="4b705448ab669022c3d413d764c5e8b11f8f69f1" upstream="refs/heads/ks-kernel.lnx.4.0.r15-rel">
+    <linkfile src="." dest="kernel_platform/.source_date_epoch_dir"/>
+  </project>
+  <project name="kernel/common-modules/trusty" path="kernel_platform/common-modules/trusty" revision="d2c32e699ecc0043b54358d7d25dd3cf3d41d434" upstream="refs/heads/ks-kernel.lnx.4.0.r15-rel"/>
+  <project name="kernel/prebuilts/build-tools" path="kernel_platform/prebuilts/kernel-build-tools" revision="b46264b70e3cdf70d08c9ae2df6ea3002b242ebc" upstream="refs/heads/ks-kernel.lnx.4.0.r15-rel" groups="ddk" />
+  <project name="kernel/qcom" path="kernel_platform/msm-kernel" revision="b3191545d511d292f6affff2b3aad117f16f0acd" upstream="refs/heads/kernel.lnx.6.6.r16-rel">
+    <linkfile src="build_with_bazel.py" dest="kernel_platform/build_with_bazel.py"/>
+    <linkfile src="qcom_build_extensions" dest="kernel_platform/build/qcom_build_extensions"/>
+  </project>
+  <project name="kernel_platform/build/bazel_common_rules" revision="3e577f2802048384e9575dd4d0d8864a7a2aa160" upstream="refs/heads/ks-kernel.lnx.4.0.r15-rel" groups="ddk"/>
+  <project name="kernel_platform/external/bazel-skylib" revision="6b103c40d8113f001475d5e13672922ef2aa0e5a" upstream="refs/heads/ks-kernel.lnx.4.0.r15-rel" groups="ddk-external"/>
+  <project name="kernel_platform/external/bazelbuild-apple_support" revision="f6003e1e3763f8aad9fb9acae79cfa5fff9ae988" upstream="refs/heads/ks-kernel.lnx.4.0.r15-rel" groups="ddk-external"/>
+  <project name="kernel_platform/external/bazelbuild-bazel-central-registry" revision="7018452ffac4fc070b29d5c5c872bac3c746a06a" upstream="refs/heads/ks-kernel.lnx.4.0.r15-rel" groups="ddk-external"/>
+  <project name="kernel_platform/external/bazelbuild-platforms" revision="04d937168075c80205c96f31752000e9de759adb" upstream="refs/heads/ks-kernel.lnx.4.0.r15-rel" groups="ddk-external"/>
+  <project name="kernel_platform/external/bazelbuild-rules_cc" revision="5d626dcf48e0e97933b48456a86966971799c9e9" upstream="refs/heads/ks-kernel.lnx.4.0.r15-rel" groups="ddk-external"/>
+  <project name="kernel_platform/external/bazelbuild-rules_java" revision="8e548c7053dffd1717d565f0409a88992f401da1" upstream="refs/heads/ks-kernel.lnx.4.0.r15-rel" groups="ddk-external"/>
+  <project name="kernel_platform/external/bazelbuild-rules_license" revision="f578df4fd057ffe2023728444759535685631548" upstream="refs/heads/ks-kernel.lnx.4.0.r15-rel" groups="ddk-external"/>
+  <project name="kernel_platform/external/bazelbuild-rules_pkg" revision="059aaa0ece0c03b731076db6300f50f83d25829a" upstream="refs/heads/ks-kernel.lnx.4.0.r15-rel" groups="ddk-external"/>
+  <project name="kernel_platform/external/bazelbuild-rules_python" revision="f71847ac898655b67634bb14e77a7408c4fb5e00" upstream="refs/heads/ks-kernel.lnx.4.0.r15-rel" groups="ddk-external"/>
+  <project name="kernel_platform/external/dtc" revision="abee18fa51c1ffdd58d5b481fb82735dfa6b8a2d" upstream="refs/heads/kernel.build.lnx.2.0.r50-rel"/>
+  <project name="kernel_platform/external/libcap" revision="8729338c078737da57a8b63ee88016799dfb4cdb" upstream="refs/heads/ks-kernel.lnx.4.0.r15-rel"/>
+  <project name="kernel_platform/external/libcap-ng" revision="2bcc92ae19481dd2b8d3ce3abdfbbee49261abe6" upstream="refs/heads/ks-kernel.lnx.4.0.r15-rel"/>
+  <project name="kernel_platform/external/lz4" revision="124599333514066524f55f5f41fbf0d46212e598" upstream="refs/heads/ks-kernel.lnx.4.0.r15-rel" groups="ddk"/>
+  <project name="kernel_platform/external/pigz" revision="9bc9fa17d499ddde88b77820f6d063e16c0cdd42" upstream="refs/heads/ks-kernel.lnx.4.0.r15-rel" groups="ddk"/>
+  <project name="kernel_platform/external/python/absl-py" revision="9ae5a78fc57c3cd539398373ae39601a8b923e62" upstream="refs/heads/ks-kernel.lnx.4.0.r15-rel" groups="ddk-external"/>
+  <project name="kernel_platform/external/toybox" revision="91f90361fc563025e6d152d68d2072109500d602" upstream="refs/heads/ks-kernel.lnx.4.0.r15-rel" groups="ddk"/>
+  <project name="kernel_platform/external/virtio-media" revision="e11fd6b3793964281c127ca26e0aa91edaab9f1f" upstream="refs/heads/ks-kernel.lnx.4.0.r15-rel"/>
+  <project name="kernel_platform/external/zlib" revision="b34cd2e4371556e913ad9801a924a891c74d1463" upstream="refs/heads/ks-kernel.lnx.4.0.r15-rel" groups="ddk"/>
+  <project name="kernel_platform/external/zopfli" revision="36c79f00e5229800d2aaa13fc42c301ec8ef1153" upstream="refs/heads/ks-kernel.lnx.4.0.r15-rel" groups="ddk"/>
+  <project name="kernel_platform/prebuilts/asuite" revision="b12ba9ab75a57ba3e1b720ddd69374f4e11bad56" upstream="refs/heads/ks-kernel.lnx.4.0.r15-rel" />
+  <project name="kernel_platform/prebuilts/build-tools" revision="925470601d505da0e71c63c1d1008240a7d9c662" upstream="refs/heads/ks-kernel.lnx.4.0.r15-rel" groups="ddk" />
+  <project name="kernel_platform/prebuilts/clang-tools" revision="1634c6a556d1f2c24897bf74156c6449486e8941" upstream="refs/heads/ks-kernel.lnx.4.0.r15-rel" />
+  <project name="kernel_platform/prebuilts/jdk/jdk11" revision="c6c90521b7c317f13d41bbd9336a8d45ee202cec" upstream="refs/heads/ks-kernel.lnx.4.0.r15-rel" />
+  <project name="kernel_platform/prebuilts/rust" revision="442511af884f074018466f85b4daadd4b0ac0050" upstream="refs/heads/ks-kernel.lnx.4.0.r15-rel" />
+  <project name="kernel_platform/system/tools/mkbootimg" path="kernel_platform/tools/mkbootimg" revision="f5c284e8998dd8a085cf027bb518b6c2b84cf744" upstream="refs/heads/ks-kernel.lnx.4.0.r15-rel"/>
+  <project name="kernel_platform/toolchain/prebuilts/ndk/r26" path="kernel_platform/prebuilts/ndk-r26" revision="abad5cbde7eb9684e37d7569810743a8a34826af" upstream="refs/heads/ks-kernel.lnx.4.0.r15-rel" groups="ddk" />
+  <project name="kernel_platform/tools/tradefederation/prebuilts" path="kernel_platform/prebuilts/tradefed" revision="eb391219cffe9b23b0ee6e33fcad88c19cbbfa05" upstream="refs/heads/ks-kernel.lnx.4.0.r15-rel" />
+  <project name="kernelplatform/prebuilts-master/clang/host/linux-x86" path="kernel_platform/prebuilts/clang/host/linux-x86" revision="7061673283909f372f4938e45149d23bd10cbd40" upstream="refs/heads/ks-kernel.lnx.4.0.r15-rel" groups="ddk" />
+  <project name="kernelplatform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" path="kernel_platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" revision="739d8a41b6096d384338a62995a04739aff8693d" upstream="refs/heads/ks-kernel.lnx.4.0.r15-rel" groups="ddk" />
+  <project name="platform/vendor/qcom-opensource/devicetree" path="kernel_platform/qcom/opensource/devicetree" revision="dc2bda73f62df3500f7c073dbd773e2194859e82" upstream="refs/heads/kernel.lnx.6.6.r16-rel">
+    <linkfile src="." dest="kernel_platform/msm-kernel/arch/arm64/boot/dts/vendor"/>
+  </project>
+</manifest>
