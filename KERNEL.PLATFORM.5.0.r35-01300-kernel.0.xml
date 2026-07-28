@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="clo" fetch="https://git.codelinaro.org/clo/la" review="codelinaro.org"/>
+  <default remote="clo" revision="KERNEL.PLATFORM.5.0.r35" sync-j="8"/>
+  <project name="abl/tianocore/edk2" path="kernel_platform/bootable/bootloader/edk2" revision="56fa91fa6cc55960c270ce10881d7a7f73ddba32" upstream="refs/heads/uefi.lnx.6.0.r35-rel"/>
+  <project name="kernel/build" path="kernel_platform/build/kernel" revision="d893e0b6d9c524e4e988be3975119b725cf15aac" upstream="refs/heads/kernel.lnx.6.12.r45-rel">
+    <linkfile src="kleaf/bazel.sh" dest="kernel_platform/tools/bazel"/>
+    <linkfile src="build.sh" dest="kernel_platform/build/build.sh"/>
+    <linkfile src="build_abi.sh" dest="kernel_platform/build/build_abi.sh"/>
+    <linkfile src="build_test.sh" dest="kernel_platform/build/build_test.sh"/>
+    <linkfile src="build_utils.sh" dest="kernel_platform/build/build_utils.sh"/>
+    <linkfile src="all-variants.sh" dest="kernel_platform/build/all-variants.sh"/>
+    <linkfile src="brunch" dest="kernel_platform/build/brunch"/>
+    <linkfile src="build_abl.sh" dest="kernel_platform/build/build_abl.sh"/>
+    <linkfile src="build_module.sh" dest="kernel_platform/build/build_module.sh"/>
+    <linkfile src="android/export_headers.py" dest="kernel_platform/build/android/export_headers.py"/>
+    <linkfile src="android/merge_dtbs.py" dest="kernel_platform/build/android/merge_dtbs.py"/>
+    <linkfile src="android/merge_dtbs.sh" dest="kernel_platform/build/android/merge_dtbs.sh"/>
+    <linkfile src="android/prepare_vendor.sh" dest="kernel_platform/build/android/prepare_vendor.sh"/>
+    <linkfile src="BUILD.bazel" dest="kernel_platform/build/BUILD.bazel"/>
+    <linkfile src="build-tools/path" dest="kernel_platform/build/build-tools/path"/>
+    <linkfile src="config.sh" dest="kernel_platform/build/config.sh"/>
+    <linkfile src="envsetup.sh" dest="kernel_platform/build/envsetup.sh"/>
+    <linkfile src="_setup_env.sh" dest="kernel_platform/build/_setup_env.sh"/>
+    <linkfile src="multi-switcher.sh" dest="kernel_platform/build/multi-switcher.sh"/>
+    <linkfile src="kleaf" dest="kernel_platform/build/kleaf"/>
+    <linkfile src="abi" dest="kernel_platform/build/abi"/>
+    <linkfile src="static_analysis" dest="kernel_platform/build/static_analysis"/>
+    <linkfile src="_wrapper_common.sh" dest="kernel_platform/build/_wrapper_common.sh"/>
+    <linkfile src="kleaf/bazel.WORKSPACE" dest="kernel_platform/WORKSPACE"/>
+    <linkfile src="kleaf/bzlmod/bazel.MODULE.bazel" dest="kernel_platform/MODULE.bazel"/>
+    <linkfile src="kleaf/bzlmod/bazel.WORKSPACE.bzlmod" dest="kernel_platform/WORKSPACE.bzlmod"/>
+  </project>
+  <project name="kernel/common" path="kernel_platform/common" revision="63ede8abbc3c561087479965d89e668bc7ecb89e" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel">
+    <linkfile src="." dest="kernel_platform/.source_date_epoch_dir"/>
+  </project>
+  <project name="kernel/common-modules/trusty" path="kernel_platform/common-modules/trusty" revision="16b3f415cff236dbad7a729c3bbf2f8191270bc8" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel"/>
+  <project name="kernel/common-modules/wonder" path="kernel_platform/common-modules/wonder" revision="4d23e052fa399fe45df5dfc74cda3a5a09386e81" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel"/>
+  <project name="kernel/prebuilts/build-tools" path="kernel_platform/prebuilts/kernel-build-tools" revision="2ab31e10cbc905cf47aabedab7936ee6081a919a" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel" groups="ddk" >
+    <linkfile src="." dest="kernel_platform/build/prebuilts/kernel-build-tools"/>
+  </project>
+  <project name="kernel/qcom" path="kernel_platform/soc-repo" revision="ac5fcf821abd3c63518d6baeed3bee9857198470" upstream="refs/heads/kernel.lnx.6.12.r45-rel">
+    <linkfile src="bazel.WORKSPACE" dest="kernel_platform/WORKSPACE"/>
+    <linkfile src="build_with_bazel.py" dest="kernel_platform/build_with_bazel.py"/>
+    <linkfile src="device.bazelrc" dest="kernel_platform/device.bazelrc"/>
+    <linkfile src="qcom_build_extensions" dest="kernel_platform/build/qcom_build_extensions"/>
+  </project>
+  <project name="kernel_platform/bootable/libbootloader" revision="7282cb5d3aa3d8f4c0c926518d18e4f000a5c803" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel"/>
+  <project name="kernel_platform/bootable/recovery" revision="9565b5ee790a4ae7acd0c6c04a2b3e0c7eeced3c" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel"/>
+  <project name="kernel_platform/build/bazel_common_rules" revision="17ed69d097b3ea08d86ee93d3c898f9b9cc304b4" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel" groups="ddk"/>
+  <project name="kernel_platform/external/arm-trusted-firmware" revision="54fd6939e177f8ff529b10183254802c76df6d08" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel"/>
+  <project name="kernel_platform/external/avb" revision="a7c15a79ae2a19e60457adf77e2b0bc89266f163" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel"/>
+  <project name="kernel_platform/external/bazel-contrib-bazel_features" revision="efd05f4ab23bd961a18766b141cb59fef486e6a3" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel" groups="ddk-external"/>
+  <project name="kernel_platform/external/bazel-skylib" revision="eb08ec4461572fc04c8607b9560744aae9eb0b4c" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel" groups="ddk-external"/>
+  <project name="kernel_platform/external/bazelbuild-bazel-central-registry" revision="b03209299e633756c47dedb8c376f106690b9798" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel" groups="ddk-external"/>
+  <project name="kernel_platform/external/bazelbuild-platforms" revision="4cb8c634fe0f22ed4e41aeb76de20be73b91b179" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel" groups="ddk-external"/>
+  <project name="kernel_platform/external/bazelbuild-rules_cc" revision="a53b1a1a911222870439fe8c5acd886c011d7106" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel" groups="ddk-external"/>
+  <project name="kernel_platform/external/bazelbuild-rules_license" revision="332a8715d3bd6666ce3af0d3c7a98148786d3d13" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel" groups="ddk-external"/>
+  <project name="kernel_platform/external/bazelbuild-rules_pkg" revision="0095058d7c678a726aab7c5ee55561b021f63115" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel" groups="ddk-external"/>
+  <project name="kernel_platform/external/bazelbuild-rules_python" revision="5e331290bb3e11d87524584917aaae19d38fdbbc" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel" groups="ddk-external"/>
+  <project name="kernel_platform/external/bazelbuild-rules_rust" revision="d02a7c28b2fcca9b126de5dae18ae60186b750ee" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel" groups="ddk-external"/>
+  <project name="kernel_platform/external/bazelbuild-rules_shell" revision="50c6599d83e03a746845ddd2b6ba7ff8d5e57fe0" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel" groups="ddk-external"/>
+  <project name="kernel_platform/external/boringssl" revision="4d28b7aadc6a4b79805802c989d918fc154d80c9" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel"/>
+  <project name="kernel_platform/external/compiler-rt" revision="a36a1bcac7ec7ac9be29d8b0b5e669d53f7886f7" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel"/>
+  <project name="kernel_platform/external/dtc" path="kernel_platform/external/qcom-dtc" revision="4d43b08f30b8706be201a9ce41ff22c5671d3c2f" upstream="refs/heads/kernel.build.lnx.3.0.r35-rel"/>
+  <project name="kernel_platform/external/elfutils" revision="f881b3cc4b93cf3eff6ff9d97adee8921b21c58a" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel"/>
+  <project name="kernel_platform/external/googletest" revision="cbeab5d01811d23ea488efc07f2c31f7c53024e2" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel"/>
+  <project name="kernel_platform/external/libcap" revision="a88d3c04a41488f5b9d4c0bfdefe7fd0796a61eb" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel"/>
+  <project name="kernel_platform/external/libcap-ng" revision="bd9c1d7d55d5935577c9796bfef244a1b4947f78" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel"/>
+  <project name="kernel_platform/external/ltp" revision="111fdb9fd4d921768b26c28c40c37365a028adfc" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel"/>
+  <project name="kernel_platform/external/lz4" revision="756e0bb452b9f7726ad49060b3753058b4611ffa" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel" groups="ddk"/>
+  <project name="kernel_platform/external/open-dice" revision="8c2fbaa0609a655d7e452817f75215c82e93df49" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel"/>
+  <project name="kernel_platform/external/pigz" revision="9bc9fa17d499ddde88b77820f6d063e16c0cdd42" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel" groups="ddk"/>
+  <project name="kernel_platform/external/python/absl-py" revision="038d397fec64d739e8ebfa180a00432c49e575fe" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel" groups="ddk-external"/>
+  <project name="kernel_platform/external/rust/android-crates-io" revision="af0dbe9afc41bddbed5512aeac7622de8a3d10d1" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel"/>
+  <project name="kernel_platform/external/rust/crates/smoltcp" revision="22ce981acab277a6809f53856ee2733d282bea31" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel"/>
+  <project name="kernel_platform/external/rust/crates/zune-inflate" revision="9a1191933a795a8aedd67e358a9df492d36345d5" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel"/>
+  <project name="kernel_platform/external/toybox" revision="68b30c67b8a49dc6dc287b60cc15f772c6ef83e3" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel" groups="ddk"/>
+  <project name="kernel_platform/external/virtio-media" path="kernel_platform/common-modules/virtio-media" revision="0997b7d85553daeac2f3cd6c8890a21caaf6319c" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel"/>
+  <project name="kernel_platform/external/zlib" revision="d4cf1d93aaa32bf6974a3b485cba389cacf209b2" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel" groups="ddk"/>
+  <project name="kernel_platform/external/zopfli" revision="f44ecee1e33238d29aff570c17e1c2296ca1c86e" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel" groups="ddk"/>
+  <project name="kernel_platform/prebuilts/build-tools" revision="7578befcd7724ed715dc5358402f029b6a6413d2" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel" groups="ddk" >
+    <linkfile src="." dest="kernel_platform/build/prebuilts/build-tools"/>
+  </project>
+  <project name="kernel_platform/prebuilts/clang-tools" revision="6b9ae6aeec96a3e8e4dbe5588583b79dda0d53f7" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel" groups="ddk" >
+    <linkfile src="." dest="kernel_platform/build/prebuilts/clang-tools"/>
+  </project>
+  <project name="kernel_platform/prebuilts/fuchsia_sdk" revision="952cb6266a381164d9f7dd06697502093f6512a0" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel" />
+  <project name="kernel_platform/prebuilts/jdk/jdk11" revision="427ae6aaa9b0da3f7658df1dfb0745c96a3487f2" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel" />
+  <project name="kernel_platform/prebuilts/rust" revision="131c022c9871f19c9b573eeb730b968a1adf4ff3" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel" groups="ddk" />
+  <project name="kernel_platform/system/core" revision="a3b721a32242006b59cb12bd62c9133632af3a2d" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel"/>
+  <project name="kernel_platform/system/libufdt" path="kernel_platform/external/libufdt" revision="3183c69ae577eccbcfd33a1defa97c0c10dac52b" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel"/>
+  <project name="kernel_platform/system/tools/mkbootimg" path="kernel_platform/tools/mkbootimg" revision="fbb061b39bfe93ff7f564f22e5e7ab528e292528" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel"/>
+  <project name="kernel_platform/toolchain/prebuilts/ndk/r26" path="kernel_platform/prebuilts/ndk-r26" revision="e535051ebc04204cec44bde38f62385d63180388" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel" groups="ddk" />
+  <project name="kernelplatform/prebuilts-master/clang/host/linux-x86" path="kernel_platform/prebuilts/clang/host/linux-x86" revision="892935249976621319cd738fdc69a45c25014bd6" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel" groups="ddk" />
+  <project name="kernelplatform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" path="kernel_platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" revision="7590272cf08aa8dfbf4d4fe71b0c4a369193437b" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel" groups="ddk" >
+    <linkfile src="sysroot" dest="kernel_platform/build/build-tools/sysroot"/>
+  </project>
+  <project name="platform/external/dtc" path="kernel_platform/external/dtc" revision="edd020ac81db8c68a7dfd38d5993001aeadedd5e" upstream="refs/heads/ks-kernel.lnx.5.0.r58-rel"/>
+  <project name="platform/vendor/qcom-opensource/devicetree" path="kernel_platform/qcom/opensource/devicetree" revision="e6fa5e9950f0e5dac918dbc519ebf43172347289" upstream="refs/heads/kernel.lnx.6.12.r45-rel">
+    <linkfile src="." dest="kernel_platform/soc-repo/arch/arm64/boot/dts/vendor"/>
+  </project>
+</manifest>
