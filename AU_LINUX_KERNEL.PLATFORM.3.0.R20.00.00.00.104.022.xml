@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="clo" fetch="https://git.codelinaro.org/clo/la" review="codelinaro.org"/>
+  <default remote="clo" revision="kernel.build.lnx.1.0" sync-j="8"/>
+  <project name="abl/tianocore/edk2" path="kernel_platform/bootable/bootloader/edk2" revision="d3c06a4618b6212e4309728790860eb0c69d1942" upstream="refs/heads/uefi.lnx.5.0.r29-rel"/>
+  <project name="kernel/build" path="kernel_platform/build/kernel" revision="393679f2805996d1f3c712aa4204d18112066850" upstream="refs/heads/kernel.lnx.6.1.r28-rel">
+    <linkfile src="kleaf/bazel.sh" dest="kernel_platform/tools/bazel"/>
+    <linkfile src="build.sh" dest="kernel_platform/build/build.sh"/>
+    <linkfile src="build_abi.sh" dest="kernel_platform/build/build_abi.sh"/>
+    <linkfile src="build_test.sh" dest="kernel_platform/build/build_test.sh"/>
+    <linkfile src="build_utils.sh" dest="kernel_platform/build/build_utils.sh"/>
+    <linkfile src="all-variants.sh" dest="kernel_platform/build/all-variants.sh"/>
+    <linkfile src="brunch" dest="kernel_platform/build/brunch"/>
+    <linkfile src="build_abl.sh" dest="kernel_platform/build/build_abl.sh"/>
+    <linkfile src="build_module.sh" dest="kernel_platform/build/build_module.sh"/>
+    <linkfile src="android/export_headers.py" dest="kernel_platform/build/android/export_headers.py"/>
+    <linkfile src="android/merge_dtbs.py" dest="kernel_platform/build/android/merge_dtbs.py"/>
+    <linkfile src="android/merge_dtbs.sh" dest="kernel_platform/build/android/merge_dtbs.sh"/>
+    <linkfile src="android/prepare_vendor.sh" dest="kernel_platform/build/android/prepare_vendor.sh"/>
+    <linkfile src="BUILD.bazel" dest="kernel_platform/build/BUILD.bazel"/>
+    <linkfile src="build-tools/path" dest="kernel_platform/build/build-tools/path"/>
+    <linkfile src="config.sh" dest="kernel_platform/build/config.sh"/>
+    <linkfile src="envsetup.sh" dest="kernel_platform/build/envsetup.sh"/>
+    <linkfile src="_setup_env.sh" dest="kernel_platform/build/_setup_env.sh"/>
+    <linkfile src="multi-switcher.sh" dest="kernel_platform/build/multi-switcher.sh"/>
+    <linkfile src="kleaf" dest="kernel_platform/build/kleaf"/>
+    <linkfile src="abi" dest="kernel_platform/build/abi"/>
+    <linkfile src="static_analysis" dest="kernel_platform/build/static_analysis"/>
+    <linkfile src="_wrapper_common.sh" dest="kernel_platform/build/_wrapper_common.sh"/>
+  </project>
+  <project name="kernel/common" path="kernel_platform/common" revision="d115a9780b5bb8e8043eaa803fbc32462eeb4aef" upstream="refs/heads/ks-kernel.lnx.3.0.r27-rel">
+    <linkfile src="." dest="kernel_platform/.source_date_epoch_dir"/>
+  </project>
+  <project name="kernel/prebuilts/build-tools" path="kernel_platform/prebuilts/kernel-build-tools" revision="3892d2c393135d568c9140c801623530eea4104c" upstream="refs/heads/ks-kernel.lnx.3.0.r27-rel" >
+    <linkfile src="." dest="kernel_platform/build/prebuilts/kernel-build-tools"/>
+  </project>
+  <project name="kernel/qcom" path="kernel_platform/msm-kernel" revision="1ed62a9d141f4381cc85ba3aef6f4f27f9886985" upstream="refs/heads/kernel.lnx.6.1.r28-rel">
+    <linkfile src="bazel.WORKSPACE" dest="kernel_platform/WORKSPACE"/>
+    <linkfile src="build_with_bazel.py" dest="kernel_platform/build_with_bazel.py"/>
+    <linkfile src="qcom_build_extensions" dest="kernel_platform/build/qcom_build_extensions"/>
+  </project>
+  <project name="kernel_platform/build/bazel_common_rules" revision="b8fb1e9af4f0d0a4942ae3cd2e9c4dbc62b2bdff" upstream="refs/heads/ks-kernel.lnx.3.0.r27-rel"/>
+  <project name="kernel_platform/external/bazel-skylib" revision="f998e5dc13c03f0eae9e373263d3afff0932c738" upstream="refs/heads/ks-kernel.lnx.3.0.r27-rel"/>
+  <project name="kernel_platform/external/bazelbuild-rules_license" revision="f578df4fd057ffe2023728444759535685631548" upstream="kernel.build.lnx.1.0"/>
+  <project name="kernel_platform/external/bazelbuild-rules_pkg" revision="059aaa0ece0c03b731076db6300f50f83d25829a" upstream="kernel.build.lnx.1.0"/>
+  <project name="kernel_platform/external/dtc" revision="ef1f65352c7084422db814e1ac07f4db4d20a6c7" upstream="refs/heads/kernel.build.lnx.2.0.r28-rel"/>
+  <project name="kernel_platform/external/python/absl-py" revision="38444b7cef78cdc20a88900ba3ebaff81369b229" upstream="refs/heads/ks-kernel.lnx.3.0.r27-rel"/>
+  <project name="kernel_platform/external/stardoc" revision="3991464e28267e89937b05d800d1b852b3b953b1" upstream="refs/heads/ks-kernel.lnx.3.0.r27-rel"/>
+  <project name="kernel_platform/prebuilts/asuite" revision="5d37beab8bd70ebc37f2b4f55009de15642ed182" upstream="refs/heads/ks-kernel.lnx.3.0.r27-rel" />
+  <project name="kernel_platform/prebuilts/bazel/linux-x86_64" revision="39f731055c9009d1c7c4fa621b5d6cf1bdb7becb" upstream="refs/heads/ks-kernel.lnx.3.0.r27-rel" />
+  <project name="kernel_platform/prebuilts/build-tools" revision="d57276e86aa82da9de4ab66ca681bcc573034b34" upstream="refs/heads/ks-kernel.lnx.3.0.r27-rel" >
+    <linkfile src="." dest="kernel_platform/build/prebuilts/build-tools"/>
+  </project>
+  <project name="kernel_platform/prebuilts/clang-tools" revision="4d2cba578e8c3265a87f638fdedea87c5d75b996" upstream="refs/heads/ks-kernel.lnx.3.0.r27-rel" >
+    <linkfile src="." dest="kernel_platform/build/prebuilts/clang-tools"/>
+  </project>
+  <project name="kernel_platform/prebuilts/jdk/jdk11" revision="59824b3398d0bb529a705ba30dbbb35e5792e4d1" upstream="refs/heads/ks-kernel.lnx.3.0.r27-rel" />
+  <project name="kernel_platform/system/tools/mkbootimg" path="kernel_platform/tools/mkbootimg" revision="f233e500c9ee758f334c84a5aa19adefd8b1d8fc" upstream="refs/heads/ks-kernel.lnx.3.0.r27-rel"/>
+  <project name="kernel_platform/toolchain/prebuilts/ndk/r23" path="kernel_platform/prebuilts/ndk-r23" revision="19ac7e4eded12adb99d4f613490dde6dd0e72664" upstream="refs/heads/ks-kernel.lnx.3.0.r27-rel" />
+  <project name="kernel_platform/tools/tradefederation/prebuilts" path="kernel_platform/prebuilts/tradefed" revision="c58fd6b1c075c6a948897e21ff4b5cdd87edef86" upstream="refs/heads/ks-kernel.lnx.3.0.r27-rel" />
+  <project name="kernelplatform/prebuilts-master/clang/host/linux-x86" path="kernel_platform/prebuilts/clang/host/linux-x86" revision="5c02656c793913112faeefdbd52acbcedd4c0cc9" upstream="refs/heads/ks-kernel.lnx.3.0.r27-rel" />
+  <project name="kernelplatform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" path="kernel_platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" revision="9c4e391b875cda867a3f1fbc47c20871da23749e" upstream="refs/heads/ks-kernel.lnx.3.0.r27-rel" >
+    <linkfile src="sysroot" dest="kernel_platform/build/build-tools/sysroot"/>
+  </project>
+</manifest>
