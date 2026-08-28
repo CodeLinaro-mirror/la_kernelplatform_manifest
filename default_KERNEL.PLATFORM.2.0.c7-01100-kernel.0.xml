@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="clo" fetch="https://git.codelinaro.org/clo/la" review="codelinaro.org"/>
+  <default remote="clo" revision="kernel.build.lnx.1.0" sync-j="8"/>
+  <project name="abl/tianocore/edk2" path="kernel_platform/bootable/bootloader/edk2" revision="dee83f69f6979c552c4dfcc17fa53a5d30efab06" upstream="refs/heads/uefi.lnx.4.0.c14" dest-branch="refs/heads/uefi.lnx.4.0.c14"/>
+  <project name="kernel/build" path="kernel_platform/build/kernel" revision="0d51232a8a90ab8ba23348e2a3ee8d1e973f39ad" upstream="refs/heads/kernel.lnx.5.15.c14" dest-branch="refs/heads/kernel.lnx.5.15.c14">
+    <linkfile src="build.sh" dest="kernel_platform/build/build.sh"/>
+    <linkfile src="build_abi.sh" dest="kernel_platform/build/build_abi.sh"/>
+    <linkfile src="build_test.sh" dest="kernel_platform/build/build_test.sh"/>
+    <linkfile src="build_utils.sh" dest="kernel_platform/build/build_utils.sh"/>
+    <linkfile src="build_abl.sh" dest="kernel_platform/build/build_abl.sh"/>
+    <linkfile src="build_module.sh" dest="kernel_platform/build/build_module.sh"/>
+    <linkfile src="all-variants.sh" dest="kernel_platform/build/all-variants.sh"/>
+    <linkfile src="brunch" dest="kernel_platform/build/brunch"/>
+    <linkfile src="_wrapper_common.sh" dest="kernel_platform/build/_wrapper_common.sh"/>
+    <linkfile src="android" dest="kernel_platform/build/android"/>
+    <linkfile src="build-tools/path" dest="kernel_platform/build/build-tools/path"/>
+    <linkfile src="config.sh" dest="kernel_platform/build/config.sh"/>
+    <linkfile src="envsetup.sh" dest="kernel_platform/build/envsetup.sh"/>
+    <linkfile src="_setup_env.sh" dest="kernel_platform/build/_setup_env.sh"/>
+    <linkfile src="multi-switcher.sh" dest="kernel_platform/build/multi-switcher.sh"/>
+    <linkfile src="kleaf/bazel.sh" dest="kernel_platform/tools/bazel"/>
+    <linkfile src="kleaf/bazel.WORKSPACE" dest="kernel_platform/WORKSPACE"/>
+    <linkfile src="abi" dest="kernel_platform/build/abi"/>
+    <linkfile src="static_analysis" dest="kernel_platform/build/static_analysis"/>
+  </project>
+  <project name="kernel/common" path="kernel_platform/common" revision="5e420960c8811e787c9cba8b9674e4484bddfcca" upstream="refs/heads/ks-kernel.lnx.2.0.c12" dest-branch="refs/heads/ks-kernel.lnx.2.0.c12" groups="qki">
+    <linkfile src="." dest=".source_date_epoch_dir"/>
+  </project>
+  <project name="kernel/msm-5.15" path="kernel_platform/msm-kernel" revision="3ee434a2fcee1f3b150fc6f7c663cff27aec6c4d" upstream="refs/heads/kernel.lnx.5.15.c14" dest-branch="refs/heads/kernel.lnx.5.15.c14"/>
+  <project name="kernel/prebuilts/build-tools" path="kernel_platform/prebuilts/kernel-build-tools" revision="dc95cb646a35a1ab02ab362754947be3ec6aa456" upstream="refs/heads/ks-kernel.lnx.2.0.c12" dest-branch="refs/heads/ks-kernel.lnx.2.0.c12" clone-depth="1"/>
+  <project name="kernel_platform/build/bazel_common_rules" revision="96ef83872cb1bc37b450255a5723123afd2ab9dd" upstream="refs/heads/ks-kernel.lnx.2.0.c12" dest-branch="refs/heads/ks-kernel.lnx.2.0.c12"/>
+  <project name="kernel_platform/external/bazel-skylib" revision="928f837bc57a82e7d80a898db45d37a8da335150" upstream="refs/heads/ks-kernel.lnx.2.0.c12" dest-branch="refs/heads/ks-kernel.lnx.2.0.c12"/>
+  <project name="kernel_platform/external/dtc" revision="fa6871f902c4a18a1aa6b44ccdaac975af15d572" upstream="refs/heads/kernel.build.lnx.1.0.c15" dest-branch="refs/heads/kernel.build.lnx.1.0.c15"/>
+  <project name="kernel_platform/external/python/absl-py" revision="97bcbed72019e99f312b6118a5935f5517438cae" upstream="refs/heads/ks-kernel.lnx.2.0.c12" dest-branch="refs/heads/ks-kernel.lnx.2.0.c12"/>
+  <project name="kernel_platform/external/stardoc" revision="f1d1c8439c6c72d58d2f330908640f3822e871ce" upstream="refs/heads/ks-kernel.lnx.2.0.c12" dest-branch="refs/heads/ks-kernel.lnx.2.0.c12"/>
+  <project name="kernel_platform/prebuilts/bazel/linux-x86_64" revision="48f20ef1646db1e61b3c5899add4153fd840e1a5" upstream="refs/heads/ks-kernel.lnx.2.0.c12" dest-branch="refs/heads/ks-kernel.lnx.2.0.c12" clone-depth="1"/>
+  <project name="kernel_platform/prebuilts/build-tools" revision="d3c53a80699ea8786ccbb8de88db7b1ae9cf1879" upstream="refs/heads/ks-kernel.lnx.2.0.c12" dest-branch="refs/heads/ks-kernel.lnx.2.0.c12" clone-depth="1"/>
+  <project name="kernel_platform/prebuilts/jdk/jdk11" revision="c1b208f20c9bada9eacffe7b8b2fe297bb3f805e" upstream="refs/heads/ks-kernel.lnx.2.0.c12" dest-branch="refs/heads/ks-kernel.lnx.2.0.c12" clone-depth="1"/>
+  <project name="kernel_platform/system/tools/mkbootimg" path="kernel_platform/tools/mkbootimg" revision="f2eb91d983b42c014ee1a911965d51499e2b08d9" upstream="refs/heads/ks-kernel.lnx.2.0.c12" dest-branch="refs/heads/ks-kernel.lnx.2.0.c12"/>
+  <project name="kernel_platform/toolchain/prebuilts/ndk/r23" path="kernel_platform/prebuilts/ndk-r23" revision="93532f3052c14fbb337ff57d5732128dc7481ee6" upstream="refs/heads/ks-kernel.lnx.2.0.c12" dest-branch="refs/heads/ks-kernel.lnx.2.0.c12" clone-depth="1"/>
+  <project name="kernelplatform/prebuilts-master/clang/host/linux-x86" path="kernel_platform/prebuilts/clang/host/linux-x86" revision="a824b4374e13fa37fdd7c2087e4adef3f566049f" upstream="refs/heads/ks-kernel.lnx.2.0.c12" dest-branch="refs/heads/ks-kernel.lnx.2.0.c12" clone-depth="1"/>
+  <project name="kernelplatform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" path="kernel_platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" revision="369c42eaba15b5b6ca44dc16745b2ff44511a043" upstream="refs/heads/ks-kernel.lnx.2.0.c12" dest-branch="refs/heads/ks-kernel.lnx.2.0.c12" clone-depth="1"/>
+  <project name="platform/prebuilts/boot-artifacts" path="kernel_platform/prebuilts/boot-artifacts" revision="45d30d07ad284018481ebb419b5d01b5de72ed02" upstream="refs/heads/ks-kernel.lnx.2.0.c12" dest-branch="refs/heads/ks-kernel.lnx.2.0.c12"/>
+</manifest>
